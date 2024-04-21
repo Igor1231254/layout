@@ -8,13 +8,21 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   
 </head>
+<header>
+  <nav>
+    <ul>
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Фільми', movies_path %></li>
+    </ul>
+  </nav>
+</header>
 <body>
   <h1>Films</h1>
   <ul>
     <% @movies.each do |movie| %>
       <li><%= movie.title %></li>
     <% end %>
-    <%= render 'layouts/header' %>
+    
   </ul>
 </body>
 </html>
